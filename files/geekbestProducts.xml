@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<listaProductos>
+        <producto>
+            <id>TB132</id>
+            <nombre>Airpods</nombre>
+            <descripcion>Harpercollins</descripcion>
+            <tipo>Tablet</tipo>
+            <precio>983.2</precio>
+            <urlimagen>www.google.es</urlimagen>
+            <proveedor>Apple</proveedor>
+        </producto>
+        <producto>
+            <id>TB133</id>
+            <nombre>Cable Lighting</nombre>
+            <descripcion>Harpercollins</descripcion>
+            <tipo>Cable</tipo>
+            <precio>15.23</precio>
+            <urlimagen>www.google.es</urlimagen>
+            <proveedor>Apple</proveedor>
+        </producto>
+        <producto>
+            <id>TB135</id>
+            <nombre>Cable Lighting</nombre>
+            <descripcion>Harpercollins</descripcion>
+            <tipo>Cable</tipo>
+            <precio>15.23</precio>
+            <urlimagen>www.google.es</urlimagen>
+            <proveedor>Apple</proveedor>
+        </producto>
+</listaProductos>

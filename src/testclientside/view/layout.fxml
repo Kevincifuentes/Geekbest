@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="750" prefWidth="1000.0" stylesheets="@../css/MetroUI.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testclientside.controller.layoutController">
+   <children>
+      <AnchorPane fx:id="paneInput" minHeight="-Infinity" minWidth="-Infinity" opacity="0.0" prefHeight="400" prefWidth="933.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="270.0" layoutY="124.0" prefHeight="400" prefWidth="394.0" style="-fx-background-color: #660000; -fx-border-color: #660000; -fx-border-width: 2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <effect>
+                  <DropShadow color="#299bb4" />
+               </effect>
+               <children>
+                  <TextField fx:id="txtId" layoutX="21.0" layoutY="50" prefHeight="32.0" prefWidth="430.0" promptText="Id" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="20.0" />               
+                  <TextField fx:id="txtNombre" layoutX="21.0" layoutY="100" prefHeight="32.0" prefWidth="430.0" promptText="Nombre" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="20.0" />
+                  <TextField fx:id="txtDescripcion" layoutX="21.0" layoutY="150" prefHeight="32.0" prefWidth="430.0" promptText="Descripcion" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="20.0" />
+                  <TextField fx:id="txtTipo" layoutX="21.0" layoutY="200" prefHeight="32.0" prefWidth="430.0" promptText="Tipo" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="20.0" />
+                  <TextField fx:id="txtPrecio" layoutX="21.0" layoutY="250" prefHeight="32.0" prefWidth="430.0" promptText="Precio" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="20.0" />
+                  <TextField fx:id="txtUrl" layoutX="21.0" layoutY="300" prefHeight="32.0" prefWidth="430.0" promptText="Url" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="20.0" />              
+                  <Button fx:id="btnSave" layoutX="100" layoutY="350" mnemonicParsing="false" onAction="#aksiSave" prefHeight="32.0" prefWidth="119.0" text="Save" AnchorPane.rightAnchor="20.0" />
+                  <AnchorPane prefHeight="32.0" prefWidth="453.0" style="-fx-background-color: gray;" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label fx:id="lblClose" layoutX="435.0" layoutY="6.0" text="X" textFill="#f8f8f8" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="6.0">
+                           <font>
+                              <Font name="Arial Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Text fill="#fcf8f8" layoutX="14.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets bottom="150.0" left="240.0" right="240.0" top="150.0" />
+         </padding>
+      </AnchorPane>
+      <AnchorPane fx:id="paneXML" minHeight="-Infinity" minWidth="-Infinity" opacity="0.0" prefHeight="400" prefWidth="933.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="270.0" layoutY="124.0" prefHeight="400" prefWidth="394.0" style="-fx-background-color: #660000; -fx-border-color: #660000; -fx-border-width: 2;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <effect>
+                  <DropShadow color="#299bb4" />
+               </effect>
+               <children>
+                  <TableView fx:id="tableData" layoutX="10.0" layoutY="106.0" onMouseClicked="#klikTableData" prefHeight="433.0" prefWidth="912.0" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="106.0">
+              <columns>
+                <TableColumn fx:id="colIdAdd" prefWidth="25" text="ID Producto">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/appbar.cabinet.in.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                <TableColumn fx:id="colNamaAdd" prefWidth="50" text="Nombre">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/appbar.book.list.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+               </children>
+            </AnchorPane>
+         </children>
+         <padding>
+            <Insets bottom="150.0" left="240.0" right="240.0" top="150.0" />
+         </padding>
+      </AnchorPane>
+      <AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="933.0" style="-fx-background-color: #660000;" stylesheets="@../css/MetroUI.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="tableData" layoutX="10.0" layoutY="106.0" onMouseClicked="#klikTableData" prefHeight="433.0" prefWidth="912.0" AnchorPane.bottomAnchor="61.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="106.0">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="25" text="ID Producto">
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/appbar.cabinet.in.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                <TableColumn fx:id="colNama" prefWidth="50" text="Nombre">
+                     <graphic>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/appbar.book.list.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="colDesc" prefWidth="400" text="Descripción">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/appbar.book.open.information.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="colTipo" prefWidth="50" text="Tipo">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/appbar.book.open.information.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="colPrecio" prefWidth="50" text="Precio">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/appbar.book.open.information.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="colFecha" prefWidth="100" text="Fecha Modificación">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/appbar.book.open.information.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+                  <TableColumn fx:id="colAction" prefWidth="100" text="Acción">
+                     <graphic>
+                        <ImageView fitHeight="46.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/appbar.settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </TableColumn>
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+            <AnchorPane prefHeight="90.0" prefWidth="788.0" style="-fx-border-color: transparent transparent gray transparent; -fx-border-width: 2; -fx-background-color: #660000;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/geekbest.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#ffffff" layoutX="150.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GeekBest Product Administrator">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="36.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="btnFichero" defaultButton="true" layoutX="700" layoutY="20" mnemonicParsing="false" onAction="#abrirFichero" prefHeight="28" prefWidth="130" text="Añadir XML" AnchorPane.bottomAnchor="50" AnchorPane.rightAnchor="150" />
+                  <Button fx:id="btnAdd" defaultButton="true" layoutX="500" layoutY="44.0" mnemonicParsing="false" onAction="#abrirAnadir" prefHeight="28" prefWidth="130" text="Añadir" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="13.0" />   
+                  <Button fx:id="btnRefresh" defaultButton="true" layoutX="600" layoutY="40.0" mnemonicParsing="false" onAction="#aksiRefresh" prefHeight="28" prefWidth="130" text="Actualizar" AnchorPane.bottomAnchor="18.0" AnchorPane.rightAnchor="150" />
+               </children>
+            </AnchorPane>
+            <HBox layoutX="678.0" layoutY="573.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="14.0">
+               <children>
+                  <ProgressBar fx:id="bar" layoutX="628.0" layoutY="567.0" prefHeight="17.0" prefWidth="155.0" progress="0.0" />
+                  <Label fx:id="lblStatus" layoutX="820" layoutY="566.0" textFill="WHITE"/>
+               </children>
+            </HBox>
+            <Label fx:id="lblClose2" layoutX="950.0" layoutY="5.0" text="X" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
